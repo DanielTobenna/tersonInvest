@@ -1,0 +1,262 @@
+/*
+	Styles for Elementor
+*/
+
+
+/* 
+**	Elementor Burger Menu
+**
+*/
+body{
+	overflow-x: hidden;
+}
+
+.cakelements-burger-menu-toggle-container .toggle-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.3rem;
+	color: #ffffff;
+	font-size: 25px;
+	cursor: pointer;
+	border: 0 solid;
+}
+
+.cakelements-burger-menu__container{
+	display: none;
+	background: #7a7a7a;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+
+}
+
+.cakelements-burger-menu{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.cakelements-burger-menu .menu-item{
+	list-style: none;
+}
+
+.cakelements-burger-menu li.menu-item a{
+	border-width: 0;
+}
+
+.cakelements-burger-menu .menu-item > a{
+	color: white;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding: 10px 30px;
+}
+
+.cakelements-burger-menu .menu-item > a:hover, .cakelements-burger-menu .menu-item > a:active, .cakelements-burger-menu .current-menu-ancestor.current-menu-parent > a, .cakelements-burger-menu .current-menu-item > a{
+	color: #000000
+}
+
+.cakelements-burger-menu .menu-item-has-children > a:focus{
+	outline: none
+}
+
+.cakelements-burger-menu .menu-item-has-children > a::after{
+	content: '\e89e';
+	font-family: eicons;
+	position: absolute;
+	color: inherit;
+	top: 10px;
+	right: 30px;
+	transform: rotate(0);
+	transition: transform .2s linear;
+}
+.cakelements-burger-menu .menu-item-has-children.menu-opened >a::after{
+	transform: rotate(90deg);
+}
+
+/* Sub Menu */
+
+.cakelements-burger-menu .menu-item-has-children .sub-menu{
+	display: none;
+	background: #7a7a7a;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Nav Menu Align */
+
+.cakelements-burger-menu-toggle-container{
+    display: flex;
+}
+.cakelements-burger-menu__align-left .cakelements-burger-menu-toggle-container{
+    justify-content: flex-start;
+}
+.cakelements-burger-menu__align-right .cakelements-burger-menu-toggle-container{
+    justify-content: flex-end;
+}
+.cakelements-burger-menu__align-center .cakelements-burger-menu-toggle-container{
+    justify-content: center;
+}
+
+
+/* 
+**	Elementor IEP Product Features
+**
+*/
+
+.space-holder{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space{
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+@media (min-width: 768px){
+	.space-md-6 {
+			flex: 0 0 50%;
+			max-width: 50%;
+	}
+}
+
+@media (min-width: 992px){
+.space-lg-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+	}
+}
+
+
+/* Product Showcase */
+.cakelements-product-feature .product-showcase-container{
+	position: relative;
+	padding: 0 50px;
+}
+@media (max-width: 991px){
+	.cakelements-product-feature .product-showcase-container{
+		display: none
+	}
+}
+
+.cakelements-product-feature .product-showcase-container .showcase-frame-image-container, .cakelements-product-feature .product-showcase-container .product-image-container{
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cakelements-product-feature .product-showcase-container img.showcase-frame-image, .cakelements-product-feature .product-showcase-container .product-image-container .product-image img{
+	width: 100%;
+	height: auto;
+}
+
+.cakelements-product-feature .product-showcase-container .product-image-container .product-image{
+    padding: 12px
+}
+
+.cakelements-product-feature .product-showcase-container .product-image-container .product-image:not(:first-of-type){
+    display: none;
+}
+
+
+/* Products */
+
+.cakelements-product-feature .products ul{
+	margin: 0;
+	padding: 0;
+}
+
+.cakelements-product-feature .products ul li.product{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	padding: 30px 0;
+}
+
+@media (min-width: 768px){
+	.cakelements-product-feature .products-odd ul li.product{
+		flex-direction: row-reverse;
+	}
+}
+
+.cakelements-product-feature .products ul li.product .icon-container{
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 20px;
+}
+
+@media (min-width: 768px){
+	.cakelements-product-feature .products-odd ul li.product .icon-container{
+		margin-left: 20px;
+		margin-right: 0;
+	}
+}
+
+.cakelements-product-feature .products ul li.product .icon-container i{
+		z-index: 9;
+}
+
+.cakelements-product-feature .products ul li.product .text-container{
+	flex: 1;
+}
+
+@media (min-width: 768px){
+	.cakelements-product-feature .products-odd ul li.product .text-container{
+		text-align: right
+	}
+}
+
+.cakelements-product-feature .products ul li.product .text-container h5{
+	font-family: poppins,sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 15px;
+	text-transform: capitalize;
+	color: #1d2025;
+	margin: 0 0 10px 0;
+}
+.cakelements-product-feature .products ul li.product .text-container p{
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #929292;
+	margin-bottom: 0;
+}
+
+
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999999;
+}
+
+#preloader #status{
+	  width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 40px;
+		line-height: 40px;
+		transform: translate(-50%, -50%)
+}

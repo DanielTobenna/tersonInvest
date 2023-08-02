@@ -1,0 +1,233 @@
+<!-- meta tags and other links -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="WxnNQgu8N6MYaayVsR05mIntsEA6ran044XBRguw">
+  <title>Nomura Finance - Sign In</title>
+    <meta name="description" content="Berkshire Consulting is a financial service firm with a focus on digital assets.">
+    <meta name="keywords" content="hyip,bitcoin,investment,hyip business,hyip script,best hyip,buy hyip script,advanced hyip script,hyip software,high yield investment program,hyip manager,hyip manager script,cheap hyip script,reliable hyip,secure hyip script,php hyip script,new hyip script,hyip program">
+    <link rel="shortcut icon" href="{% static 'logonomura.png' %}" type="image/x-icon">
+
+    
+    <link rel="apple-touch-icon" href="{% static 'logonomura.png' %}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Nomura Finance - Sign In">
+    
+    <meta itemprop="name" content="Nomura Finance - Sign In">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="{% static 'logonomura.png' %}">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nomura Finance -Financial Management">
+    <meta property="og:description" content="Nomura Finance is a financial service firm with a focus on digital assets.">
+    <meta property="og:image" content="{% static 'logonomura.png' %}"/>
+    <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta property="og:url" content="{% url 'signin' %}">
+    
+    <meta name="twitter:card" content="summary_large_image">
+
+  
+  <link rel="stylesheet" href="{% static 'dashlite.css' %}">
+  <link rel="stylesheet" href="{% static 'theme.css' %}">
+  
+
+
+  </head>
+
+  <style type="text/css">
+        .messages{
+            color: red;
+            text-align: center;
+        }
+  </style>
+
+<body class="nk-body npc-invest bg-lighter no-touch nk-nio-theme dark-mode as-mobile">
+  <div class="nk-app-root">
+    
+
+      
+  <div class="nk-main ">
+    <!-- wrap @s  -->
+    <div class="nk-wrap nk-wrap-nosidebar">
+      <!-- content @s  -->
+      <div class="nk-content ">
+        <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
+          <div class="brand-logo pb-4 text-center">
+            <a href="https://nfincs.com" class="logo-link">
+              <img class="logo-light logo-img logo-img-lg"
+                src="{% static 'logonomura.png' %}"
+                srcset="{% static 'logonomura.png' %} 2x" alt="logo">
+              <img class="logo-dark logo-img logo-img-lg"
+                src="{% static 'logonomura.png' %}"
+                srcset="{% static 'logonomura.png' %} 2x" alt="logo-dark">
+            </a>
+          </div>
+          <div class="card card-bordered">
+            <div class="card-inner card-inner-lg">
+              <div class="nk-block-head">
+                <div class="nk-block-head-content">
+                  <h4 class="nk-block-title"style="color:#104240">Sign-In</h4>
+                  <div class="nk-block-des">
+                    <p>Access Your Back! portfolio using your Username and
+                      password.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <form action="" class="mt-4" method="post">
+                {% csrf_token %}              
+
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <label class="form-label" for="default-01">Username</label>
+                  </div>
+                  <input type="text" name="username" class="form-control form-control-lg" id="default-01"
+                    placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <label class="form-label" for="password">Password</label>
+                    <a class="link link-primary link-sm" href=""style="color:#104240">Forgot
+                      Password?</a>
+                  </div>
+                  <div class="form-control-wrap">
+                    <a href="#" class="form-icon form-icon-right passcode-switch" data-target="password">
+                      
+                     
+                    </a>
+                    <input type="password" name="password" class="form-control form-control-lg" id="password"
+                      placeholder="Enter your password">
+                  </div>
+                  <div class="form-control-wrap">
+                    <div class="form-group d-flex justify-content-center">
+                                          </div>
+                                      </div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-lg btn-primary btn-block">Sign in</button>
+                </div>
+              </form>
+              <div class="form-note-s2 text-center pt-4"> New on our platform? <a
+                  href="{% url 'signup' %}"style="color:#104240">Create
+                  an account</a>
+              </div>
+               {% for message in messages %}
+
+                    <p class="messages">{{message}}</p>
+
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- wrap @e  -->
+    </div>
+    <!-- content @e  -->
+  </div>
+
+
+
+    
+
+    <!-- footer section start -->
+        
+    <!-- footer @s  -->
+    <div class="nk-footer nk-footer-fluid bg-lighter">
+      <div class="container-xl wide-lg">
+        <div class="nk-footer-wrap">
+          <div class="nk-footer-copyright">
+            © 2023 <a href="https://account.nfincs.com">Nomura Finance</a>. All rights reserved          </div>
+          <div class="nk-footer-links">
+            <ul class="nav nav-sm">
+
+                <li class="nav-item"><a class="nav-link"style="color:#104240"
+                      href="">Privacy Policy 
+                    </a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link"style="color:#104240"
+                      href="">Terms & Condition 
+                    </a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer @e  -->
+    <!-- footer section end -->
+  </div> <!-- page-wrapper end -->
+
+
+  
+    <script src="{% static 'bundle.js' %}"></script>
+  <script src="{% static 'scripts.js' %}"></script>
+
+
+  <link rel="stylesheet" href="{% static 'iziToast.min.css' %}">
+<script src="{% static 'iziToast.min.js' %}"></script>
+
+
+<script>
+"use strict";
+    function notify(status,message) {
+        iziToast[status]({
+            message: message,
+            position: "topRight"
+        });
+    }
+</script>
+  
+    <script>
+    "use strict";
+
+    function submitUserForm() {
+      var response = grecaptcha.getResponse();
+      if (response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML =
+          '<span style="color:red;">Captcha field is required.</span>';
+        return false;
+      }
+      return true;
+    }
+
+    function verifyCaptcha() {
+      document.getElementById('g-recaptcha-error').innerHTML = '';
+    }
+  </script>
+
+  <script>
+    (function() {
+      "use strict";
+      $(document).on("change", ".langSel", function() {
+        window.location.href = "https://account.nfincs.com/change/" + $(this).val();
+      });
+
+      $('.policy').on('click', function() {
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        $.get('https://account.nfincs.com/cookie/accept', function(response) {
+          iziToast.success({
+            message: response,
+            position: "topRight"
+          });
+          $('.cookie__wrapper').addClass('d-none');
+        });
+      });
+    })();
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+/* ===========
+waring-message
+===============*/
+.waring-message {
+	padding: 30px 0;
+	background: #f8f8f8;
+}
+
+#masthead {
+	background: none !important;
+}
+
+.elementor-widget:not(:last-child) {
+    margin-bottom: 0px !important;
+}
+
+
+body::before{
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	padding: 100px !important;
+	height: 1200px !important;
+	background-image: linear-gradient(330deg, var( --e-global-color-cryptoz9 ) 60%, var( --e-global-color-cryptoz7 ) 100%) !important; 
+	content: '' !important;
+}
+
+
+.before-import-warning-header p,
+.before-import-warning-footer p{
+	font-size: 28px;
+    font-weight: 600;
+    line-height: 1;
+    font-family: var(--e-global-typography-primary-font-family);
+    color: var(--dark-color);
+	line-height: 38px;
+	padding: 0 20px;
+	position: relative;
+}
+
+
+.before-import-warning-header p::before,
+.before-import-warning-footer p::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 0px;
+	height: 40px;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+
+	border-bottom: 50px solid var(--global-palette1);
+	top: 18px;
+	left: -76px;
+	line-height: 30px;
+	animation: warninganim infinite 1s ease-in-out alternate;
+}
+
+
+@keyframes warninganim {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.2);
+	}
+}
+
+.before-import-warning-header p::after,
+.before-import-warning-footer p::after{
+	content: '!';
+	position: absolute;
+	display: block;
+	width: 0px;
+	height:30px;
+	color: #fff;
+	top: 31px;
+	left: -39px;
+	line-height: 30px;
+	animation: warninganimcontent 1s ease-in-out 0.3s infinite alternate;
+}
+
+@keyframes warninganimcontent {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0.7);
+	}
+}
+
+.before-import-warning-header p a,
+.before-import-warning-footer p a{
+	text-decoration: none;
+   font-family: var(--e-global-typography-primary-font-family);
+   
+    font-size: 28px !important;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ===========
+Global css
+===============*/
+body{
+ margin-bottom: 0px !important;
+}
+
+
+/* breadcrumb */
+.page-header .cryptoz-breadcrumb {
+    margin-top: 15px;
+    position: relative;
+}
+.breadcrumbs .trail-items, .breadcrumbs .trail-items li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    text-indent: 0;
+}
+.cryptoz-breadcrumb ul li.trail-end {
+    color: #fff;
+}
+.page-header .page-title {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 0;
+    position: relative;
+}
+.cryptoz-breadcrumb a {
+    color: #fff;
+}
+
+
+.cryptoz-breadcrumb a:hover, .cryptoz-breadcrumb a:active, .cryptoz-breadcrumb a:focus, .cryptoz-breadcrumb a:visited {
+    color: #f5f5f5;
+}
+.cryptoz-breadcrumb a:hover:hover, .cryptoz-breadcrumb a:active:hover, .cryptoz-breadcrumb a:focus:hover, .cryptoz-breadcrumb a:visited:hover {
+    color: var(--global-palette1);
+}
+
+.cryptoz-breadcrumb a:hover {
+/*     color: red !important; */
+}
+
+.breadcrumb-trail{
+	font-size: 16px;
+	font-weight: 400;
+	font-family: var(--e-global-typography-primary-font-family);
+	line-height: 32px;
+}
+
+.breadcrumbs .trail-items {
+    list-style: none;	
+}
+
+.trail-items li::after {
+    content: "\002F";
+    padding: 0 0.5em;
+    color: #edf0f2;
+}
+.trail-items li:last-of-type::after {
+    display: none;
+}
+
+/* =============
+Banner
+===================*/
+
+.cryptoz-banner-breadcrumb {
+    padding: 80px 0 80px;
+}
+
+@media (min-width: 768px){
+	.cryptoz-banner-breadcrumb {
+    padding: 100px 0 100px;
+}
+
+}
+
+.cryptoz-banner-breadcrumb {
+    background-color: transparent;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    position: relative;
+    height: auto;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    
+}
+
+/* Overly Default */
+.cryptoz-banner-breadcrumb {
+    position: relative;
+  }
+  
+  .cryptoz-banner-breadcrumb::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	  background-image: none;
+    content: '';
+    opacity: .8;
+  }
+
+.page-header.error-404-main, .cryptoz-banner-breadcrumb::before {
+	
+	background-image: none !important;
+/*     background-image: linear-gradient(341deg, var( --e-global-color-cryptoz9 ) 60%, var( --e-global-color-cryptoz7 ) 100%) !important; */
+	opacity: 1;
+/* 	margin-top: -102px; */
+}
+  
+  @media (min-width: 1440px){
+    .cryptoz-banner-breadcrumb {
+        padding: 100px;
+        height: 320px;
+    }
+  
+}
+
+  /* ===========
+    Page Title
+  ===============*/
+
+.page-title {
+	font-family: "Michroma", Sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+	.page-title {
+    	font-size: 42px;
+	}
+}
+/* ===========
+Global css End
+===============*/
+
+/* ===========
+Global css
+===============*/
+
+/* ===========
+Global css
+===============*/
